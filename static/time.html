@@ -13,8 +13,12 @@
 </body>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const now = new Date();
-        document.getElementById("time").innerHTML = now.getHours() + ":" + now.getMinutes();
+      window.setInterval(() => {
+            var str = "";
+            var now = new Date();
+            str += now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
+            document.getElementById("time").innerHTML = str;
+        }, 1000);
     });
 </script>
 </html>
